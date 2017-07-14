@@ -1,26 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="display: inline-block">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <ul>
-    <li *ngFor='let email of emails1'>{{ bill.email }}  </li>
-    <li *ngIf='!importance'>{{ bill.importance}}</li>
-    <li>{{ bill.subject }}</li>
-    <li>{{ bill.content }}</li>
-    <br>
-    <li *ngFor='let email of emails1'>{{ user.email }}  </li>
-    <li *ngIf='!importance'>{{ user.importance}}</li>
-    <li>{{ user.subject }}</li>
-    <li>{{ user.content }}</li>
-    <br>
-    <li *ngFor='let email of emails1'>{{ newUser.email }}  </li>
-    <li *ngIf='importance'>{{ newUser.importance}}</li>
-    <li>{{ newUser.subject }}</li>
-    <li>{{ newUser.content }}</li>
-    <br>
-    <li *ngFor='let email of emails1'>{{ timmy.email }}  </li>
-    <li *ngIf='importance'>{{ timmy.importance}}</li>
-    <li>{{ timmy.subject }}</li>
-    <li>{{ timmy.content }}</li>
-  </ul>
+<div class="container">
+  <h1>Dojo Mail</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Importance</th>
+        <th>Subject</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let email of emails">
+        <td>{{email.email}}</td>
+        <td>
+          <span *ngIf="email.important">High</span>
+          <span *ngIf="!email.important">Low</span>
+        </td>
+        <td>{{email.subject}}</td>
+        <td>{{email.content}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

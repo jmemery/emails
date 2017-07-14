@@ -7,29 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  importance = true;
-  emails1: any = ['bIll@micro.com']
-  bill = {
-    email: 'bill@microsoft.com',
-    importance: false,
-    subject: 'test',
-    content: 'this is a test'}
-  user ={
-    email: 'user@mail.com',
-    importance: false,
-    subject: 'test',
-    content: 'this is also test'
-  }
-  newUser ={
-    email: 'leah@lovelace.com',
-    importance: 'High',
-    subject: 'test',
-    content: 'this is also test'
-  }
-  timmy ={
-    email: 'timmy@mail.com',
-    importance: 'High',
-    subject: 'The new Microsoft Windows XI is about to release',
-    content: "This was a joke everyone uses Mac now"
-  }
+  emails = [
+    {email: 'bill@gates.com', important: true, subject: 'New Windows', content: 'Windows XI will launch in 2100.'},
+    {email: 'ada@lovelace.com', important: true, subject: 'Programming', content: 'Echantress of Numbers.'},
+    {email: 'john@carmac.com', important: false, subject: 'Updated Algo', content: 'New Algorithm for shadow volumes.'},
+    {email: 'gabe@gates.com', important: false, subject: 'HL3!', content: 'Just kidding...'}
+  ]
 }
