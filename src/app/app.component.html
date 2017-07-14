@@ -1,11 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div style="display: inline-block">
   <h1>
     Welcome to {{title}}!
   </h1>
   <ul>
-    <li *ngFor='let email of emails1'>{{ emails1 }}  </li>
-    <li *ngIf='!importance'>{{ emails.importance}}</li>
-    <li>{{ emails.subject }}</li>
-    <li>{{ emails.content }}</li>
+    <li *ngFor='let email of emails1'>{{ bill.email }}  </li>
+    <li *ngIf='!importance'>{{ bill.importance}}</li>
+    <li>{{ bill.subject }}</li>
+    <li>{{ bill.content }}</li>
+    <br>
+    <li *ngFor='let email of emails1'>{{ user.email }}  </li>
+    <li *ngIf='!importance'>{{ user.importance}}</li>
+    <li>{{ user.subject }}</li>
+    <li>{{ user.content }}</li>
+    <br>
+    <li *ngFor='let email of emails1'>{{ newUser.email }}  </li>
+    <li *ngIf='importance'>{{ newUser.importance}}</li>
+    <li>{{ newUser.subject }}</li>
+    <li>{{ newUser.content }}</li>
+    <br>
+    <li *ngFor='let email of emails1'>{{ timmy.email }}  </li>
+    <li *ngIf='importance'>{{ timmy.importance}}</li>
+    <li>{{ timmy.subject }}</li>
+    <li>{{ timmy.content }}</li>
   </ul>
